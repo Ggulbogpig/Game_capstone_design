@@ -268,7 +268,7 @@ class MarioProxy:
     def simulate_long(self,
         level: Union[str, MarioLevel],
         agent: MarioJavaAgents=MarioJavaAgents.Runner,
-        k: float=4., b: int=20000 #100에서 타임리밋을 30초로 바꿔줌
+        k: float=4., b: int=20000 #100에서 타임리밋을 20초로 바꿔줌
     ) -> Dict:
         # start_time = time.perf_counter()
         ts = MarioLevel.tex_size
