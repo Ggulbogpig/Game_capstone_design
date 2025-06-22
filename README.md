@@ -48,4 +48,11 @@ java PlayLevel.java
 플레이할 에이전트와 레벨 설정 후 시뮬레이션을 진행할 수 있다.
 
 python smb.py
-에이전트에 최적화된 레벨로 플레이 레벨을 변경한 후 직접 레벨을 플레이하며 테스트해볼 수 있다. 
+에이전트에 최적화된 레벨로 플레이 레벨을 변경한 후 직접 레벨을 플레이하며 테스트해볼 수 있다.
+
+
+## 📌 Based on
+
+This project is based on [MFEDRL](github.com/SUSTechGameAI/MFEDRL).
+
+Parts of the code in the `MFEDRL-MASTER/` directory were modified from the original repository.
