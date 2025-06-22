@@ -1,0 +1,36 @@
+----------------Total steps: 250----------------
+Time passed: 204s
+fps: 1.22
+EpLength: 25.00 +- 0.00
+FunContent: 10.13 +- 6.85
+FunBehaviour: -20.65 +- 11.24
+Playability: -25.00 +- 0.00
+TotalScore: -35.52 +- 12.09
+
+----------------Total steps: 500----------------
+Time passed: 414s
+fps: 1.19
+EpLength: 25.00 +- 0.00
+FunContent: 10.08 +- 7.66
+FunBehaviour: -16.74 +- 9.53
+Playability: -25.00 +- 0.00
+TotalScore: -31.66 +- 11.30
+
+----------------Total steps: 750----------------
+Time passed: 626s
+fps: 1.18
+EpLength: 25.00 +- 0.00
+FunContent: 11.64 +- 6.55
+FunBehaviour: -14.91 +- 10.30
+Playability: -25.00 +- 0.00
+TotalScore: -28.28 +- 14.79
+
+----------------Total steps: 1000----------------
+Time passed: 834s
+fps: 1.2
+EpLength: 25.00 +- 0.00
+FunContent: 13.05 +- 6.43
+FunBehaviour: -18.24 +- 8.70
+Playability: -25.00 +- 0.00
+TotalScore: -30.18 +- 12.54
+
