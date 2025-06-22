@@ -24,7 +24,7 @@ ex) 아래는 에이전트 행동 특성 가중치 조합이다.
 ## Features
 
 
-1. Mario-AI-Framework_agent0.jar 폴더 안의 agents/robinBaumgarten/AStarTree.java 파일 내에 가중치 수정 부분을 원하는 가중치 조합으로 변경한 후 재컴파일한다.
+- Mario-AI-Framework_agent0.jar 폴더 안의 agents/robinBaumgarten/AStarTree.java 파일 내에 가중치 수정 부분을 원하는 가중치 조합으로 변경한 후 재컴파일한다.
 
   .jar 폴더 압축 해제 명령어
  
@@ -34,8 +34,7 @@ ex) 아래는 에이전트 행동 특성 가중치 조합이다.
  
   `javac -cp . -d . $(Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName })`
  
-
-2. 변경한 jar 파일을 재컴파일한 후 다시 jar 파일로 압축하여 내보낸 후 기존 jar 파일과 교체한다.
+- 변경한 jar 파일을 재컴파일한 후 다시 jar 파일로 압축하여 내보낸 후 기존 jar 파일과 교체한다.
 
   폴더 내의 모든 파일들을 jar파일로 압축하는 명령어
  
@@ -45,13 +44,11 @@ ex) 아래는 에이전트 행동 특성 가중치 조합이다.
  
   `Copy-Item -Path "새로 만든 jar 폴더 경로" -Destination "기존 프레임워크 jar 폴더 경로" -Force`
 
-    
-3. train.py 코드에서 학습 시 default로 설정하여 학습을 진행하는데 src/designer/train_designer.py 파일 상단 코드에 default는 'Runner' 에이전트로 설정하고 있다. Runner 에이전트는 robinBaumgarten 에이전트이기   때문에 자바 파일 내의 robinBaumgarten 폴더의 AStartree.java파일을 뱐경하면 적용이 된다. 
+- train.py 코드에서 학습 시 default로 설정하여 학습을 진행하는데 src/designer/train_designer.py 파일 상단 코드에 default는 'Runner' 에이전트로 설정하고 있다. Runner 에이전트는 robinBaumgarten 에이전트이기 때문에 자바 파일 내의 robinBaumgarten 폴더 내의 AStartree.java파일을 변경하면 적용된다. 
+
+- smb.py 파일의 simulate_long() 함수에서 realTimeLimitMs 변수를 수정해주면서 한 스텝의 플레이 타임리밋을 설정해줄 수 있다. (30000으로 설정 시 30초)
  
-4. smb.py 파일의 simulate_long() 함수에서 realTimeLimitMs 변수를 수정해주면서 한 스텝의 플레이 타임리밋을 설정해줄 수 있다. (30000으로 설정 시 30초)
- 
-5. python train.py designer --res_path test6 명령어를 입력해서 RL-desiger를 학습시킨 후에 mylog.txt 파일이 test6 폴더 내에 생성되고 250스텝마다의 Funbehaviour, FunContent, Playability 로그를 확인할 수 있   다.
- 이를 통해 에이전트별로 학습이 진행될수록 레벨의 다양성, 플레이 다양성과 플레이가능성이 개선되는 것을 확인할 수 있다. 
+- python train.py designer --res_path test6 명령어를 입력해서 RL-desiger를 학습시킨 후에 mylog.txt 파일이 test6 폴더 내에 생성되고 250스텝마다의 Funbehaviour, FunContent, Playability 로그를 확인할 수 있   다. 이를 통해 에이전트별로 학습이 진행될수록 레벨의 다양성, 플레이 다양성과 플레이가능성이 개선되는 것을 확인할 수 있다. 
   
 
 ## Getting Started
