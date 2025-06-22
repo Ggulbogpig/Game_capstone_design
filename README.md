@@ -26,24 +26,24 @@ ex) 아래는 에이전트 행동 특성 가중치 조합이다.
 
 1. Mario-AI-Framework_agent0.jar 폴더 안의 agents/robinBaumgarten/AStarTree.java 파일 내에 가중치 수정 부분을 원하는 가중치 조합으로 변경한 후 재컴파일한다.
 
- .jar 폴더 압축 해제 명령어
+  .jar 폴더 압축 해제 명령어
  
- `jar xf ".jar 파일 경로”`
+  `jar xf ".jar 파일 경로”`
 
- 디렉토리 내의 모든 .java 파일 재컴파일 명령어
+  디렉토리 내의 모든 .java 파일 재컴파일 명령어
  
- `javac -cp . -d . $(Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName })`
+  `javac -cp . -d . $(Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName })`
  
 
 2. 변경한 jar 파일을 재컴파일한 후 다시 jar 파일로 압축하여 내보낸 후 기존 jar 파일과 교체한다.
 
- 폴더 내의 모든 파일들을 jar파일로 압축하는 명령어
+  폴더 내의 모든 파일들을 jar파일로 압축하는 명령어
  
- `java --create --file Mario-AI-Framework.jar -C ..`
+  `java --create --file Mario-AI-Framework.jar -C ..`
 
- 기존 프레임워크의 jar 파일을 새로 만든걸로 카피 명령어
+  기존 프레임워크의 jar 파일을 새로 만든걸로 카피 명령어
  
- `Copy-Item -Path "새로 만든 jar 폴더 경로" -Destination "기존 프레임워크 jar 폴더 경로" -Force`
+  `Copy-Item -Path "새로 만든 jar 폴더 경로" -Destination "기존 프레임워크 jar 폴더 경로" -Force`
 
     
 3. train.py 코드에서 학습 시 default로 설정하여 학습을 진행하는데 src/designer/train_designer.py 파일 상단 코드에 default는 'Runner' 에이전트로 설정하고 있다. Runner 에이전트는 robinBaumgarten 에이전트이기   때문에 자바 파일 내의 robinBaumgarten 폴더의 AStartree.java파일을 뱐경하면 적용이 된다. 
